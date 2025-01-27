@@ -23,7 +23,7 @@ export const useCarrinhoContext = () => {
       return setCarrinho([...carrinho, novoProduto]);
     }
 
-    setCarrinho((carrinhoAtual) =>
+    const carrinhoAtualizado = setCarrinho((carrinhoAtual) =>
       carrinhoAtual.map((itemDoCarrinho) => {
         if (itemDoCarrinho.id === novoProduto.id) {
           return {
